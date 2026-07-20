@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::selection { background: #4F46E5; color: #fff; }
+  :focus-visible { outline: 2px solid #4F46E5; outline-offset: 2px; }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs tracking-widest uppercase text-mute;
+  }
+  .btn-primary {
+    @apply bg-indigo text-white font-medium px-5 py-2.5 rounded-md
+           hover:brightness-110 active:brightness-95 transition disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply border border-line text-ink font-medium px-5 py-2.5 rounded-md
+           hover:border-mute transition bg-white;
+  }
+  .input-field {
+    @apply w-full bg-white border border-line rounded-md px-4 py-2.5 text-ink placeholder-mute
+           focus:border-indigo outline-none transition;
+  }
+  .card {
+    @apply bg-panel border border-line rounded-lg;
+  }
+}
